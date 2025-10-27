@@ -20,7 +20,7 @@ load_dotenv(ENV_PATH)
 # -> 같은 도메인이 아니니까 react 서버에서 들어오는 요청을 허용할 수 있게 cors 설정 해야함
 REACT_HOST = os.getenv('REACT_HOST', "react-server")
 
-if REACT_HOST.startwith('http'):
+if REACT_HOST.startswith('http'):
     # http://localhost:3000 or 5173
     ORIGIN = REACT_HOST
 else:
